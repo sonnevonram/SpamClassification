@@ -4,7 +4,7 @@ from sklearn.svm import SVC
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 
 # Data contoh (bisa diganti dengan dataset yang sesuai)
-messages = [
+email = [
     ("Gratis masuk ke konser besok? Segera dapatkan tiketnya!", "spam"),
     ("Halo, bagaimana kabarmu? Sudah lama tidak berbicara.", "ham"),
     ("Selamat! Kamu memenangkan hadiah spesial.", "spam"),
@@ -12,7 +12,7 @@ messages = [
 ]
 
 # Memisahkan pesan dan label
-texts, labels = zip(*messages)
+texts, labels = zip(*email)
 
 # Mengonversi label menjadi nilai biner: 0 untuk ham, 1 untuk spam
 label_map = {"ham": 0, "spam": 1}
